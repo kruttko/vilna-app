@@ -1,10 +1,13 @@
 (() => {
+    function engageEvent() {
+        document.getElementById('event').ApptentiveSDK.engage("lol");
+    }
 
-    const btn = document.querySelector("button");
+//     const btn = document.querySelector("button");
 
-    btn.addEventListener("click", function () {
-        ApptentiveSDK.engage("lol");
-});
+//     btn.addEventListener("click", function () {
+//         ApptentiveSDK.engage("lol");
+// });
 
     // const button = ApptentiveSDK.engage("lol");
 })();
