@@ -1,5 +1,5 @@
 (() => {
-    const contact = document.querySelector(".contact-me-button");
+    const contact = document.querySelector("contact-me-button");
     const btn = document.querySelector("button");
 
     btn.addEventListener("click", function () {
