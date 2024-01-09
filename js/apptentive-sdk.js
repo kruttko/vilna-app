@@ -53,26 +53,22 @@ document.addEventListener("DOMContentLoaded", function() {
   
     // Assuming you have a button with the id "btn-mc" for Message Center
     var messageCenterButton = document.getElementById("btn-mc");
-  
-    if (messageCenterButton) {
-      messageCenterButton.addEventListener("click", function() {
-        // Trigger the Message Center whenever the button is clicked
-        ApptentiveSDK.showMessageCenter();
-      });
-    }
-  });
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Wait for the DOM to be fully loaded before adding event listeners
-  
-    // Assuming you have a button with the id "btn-mc" for Message Center
-    var messageCenterButton = document.getElementById("btn-mc");
-  
     if (messageCenterButton) {
-      // Add a click event listener to the Message Center button
       messageCenterButton.addEventListener("click", function() {
-        // Trigger the Message Center when the button is clicked
         ApptentiveSDK.showMessageCenter();
       });
     }
+  
+    // Assuming you have a button with the class "btn-survey-1" for Survey 1
+    var survey1Button = document.querySelector(".btn-survey-1");
+  
+    if (survey1Button) {
+      survey1Button.addEventListener("click", function() {
+        // Send an event named "survey_1" when the button is clicked
+        ApptentiveSDK.engage('survey_1');
+      });
+    }
+  
+    // ... (add more event listeners if needed)
   });
