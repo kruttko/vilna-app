@@ -4,116 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Website</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="./dist/css/main.min.css">
+    <link rel="stylesheet" href="./styling.css">
 
-    <script>(function initApptentiveSDK(){var ApptentiveSDK=window.ApptentiveSDK=window.ApptentiveSDK||[];if(!ApptentiveSDK.version){if(!ApptentiveSDK.loaded){ApptentiveSDK.loaded=true;ApptentiveSDK.methods=["buildDevice","createConversation","createMessage","engage","getSegments","identifyPerson","setOption","setPageName","showInteraction","showMessageCenter","updatePerson"];ApptentiveSDK.factory=function factory(t){return function f(){for(var _len=arguments.length,args=new Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key]}var e=Array.prototype.slice.call(args);e.unshift(t);ApptentiveSDK.push(e);return ApptentiveSDK}};for(var i=0;i<ApptentiveSDK.methods.length;i++){var method=ApptentiveSDK.methods[i];ApptentiveSDK[method]=ApptentiveSDK.factory(method)}ApptentiveSDK.LOADER_VERSION="1.0.0"}}})();</script>
-    <script async src="https://sdk.apptentive.com/v1/apps/64937a605d5ecb4963a6452f/websdk"></script>
+    <!-- <script>(function initApptentiveSDK(){var ApptentiveSDK=window.ApptentiveSDK=window.ApptentiveSDK||[];if(!ApptentiveSDK.version){if(!ApptentiveSDK.loaded){ApptentiveSDK.loaded=true;ApptentiveSDK.methods=["buildDevice","createConversation","createMessage","engage","getSegments","identifyPerson","setOption","setPageName","showInteraction","showMessageCenter","updatePerson"];ApptentiveSDK.factory=function factory(t){return function f(){for(var _len=arguments.length,args=new Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key]}var e=Array.prototype.slice.call(args);e.unshift(t);ApptentiveSDK.push(e);return ApptentiveSDK}};for(var i=0;i<ApptentiveSDK.methods.length;i++){var method=ApptentiveSDK.methods[i];ApptentiveSDK[method]=ApptentiveSDK.factory(method)}ApptentiveSDK.LOADER_VERSION="1.0.0"}}})();</script> -->
+    <!-- <script async src="https://sdk.apptentive.com/v1/apps/64937a605d5ecb4963a6452f/websdk"></script> -->
     <script src="./js/apptentive-sdk.js"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="header-nav container">
-
-            <nav class="main-nav">
-                <ul class="main-nav-list list">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link link">about</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link link">menu</a>
-                    </li>
-                    <button onClick="engageEvent()" class="contact-me-button button" id="event">contact</button>
-                    </li>
-                </ul>
-            </nav>
-            <div class="backdrop is-hidden">
-                <div class="modal">
-                <button class="modal--close button">
-                    <svg class="modal__icon" width="20" height="20">
-                        <use href="./images/location.svg"></use>
-                    </svg>
-                </button>
-                </div>
-            </div>
-
-        </div>
-    </header>
+    <header></header>
 
     <main>
-        <section class="intro-section section">
-            <div class="intro-section-container container">
-                <!-- <div class="main-photo">
-                </div> -->
-
-                <div class="intro-text-container">
-                    <h1 class="intro-head">Hi there!
-                        <br>
-                        <span class="intro-head-name">I'm a testing webpage!</span>
-                    </h1>
-                    <p class="intro-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua!
-                    </p>
-                </div>
-
-            </div>
-        </section>
-    
-        <section class="about-me section">
-            <div class="container">
-                <h1 class="about-me-head">Some info..</h1>
-                <h2 class="location">
-                    <img src="./images/location.svg" alt="Location Image" class="location-img" width="20px">
-                    Lviv, Ukraine
-                </h2>
-                <p class="about-me-text">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.!</p>
-                <ul class="about-me-list list">
-                    <li class="about-me-photo">
-                        <img src="./images/placeholder.jpg" alt="About Me Photo" class="about-me-photo_img" width="270">
-                    </li>
-                    <li class="about-me-photo">
-                        <img src="./images/placeholder.jpg" alt="About Me Photo" class="about-me-photo_img" width="270">
-                    </li>
-                    <li class="about-me-photo">
-                        <img src="./images/placeholder.jpg" alt="About Me Photo" class="about-me-photo_img" width="270">
-                    </li>
-                    <li class="about-me-photo">
-                        <img src="./images/placeholder.jpg" alt="About Me Photo" class="about-me-photo_img" width="270">
-                    </li>
-                </ul>
-        
-                <h2 class="location">
-                    <img src="./images/location.svg" alt="Location Image" class="location-img" width="20px">
-                    Kyiv, Ukraine
-                </h2>
-                <p class="about-me-text">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.!</p>
-                <ul class="about-me-list list">
-                    <li class="about-me-photo">
-                        <img src="./images/placeholder.jpg" alt="About Me Photo" class="about-me-photo_img" width="270">
-                    </li>
-                    <li class="about-me-photo">
-                        <img src="./images/placeholder.jpg" alt="About Me Photo" class="about-me-photo_img" width="270">
-                    </li>
-                    <li class="about-me-photo">
-                        <img src="./images/placeholder.jpg" alt="About Me Photo" class="about-me-photo_img" width="270">
-                    </li>
-                    <li class="about-me-photo">
-                        <img src="./images/placeholder.jpg" alt="About Me Photo" class="about-me-photo_img" width="270">
-                    </li>
-                </ul>
-            </div>
-        </section>
+        <div class="main">
+            <button class="btn btn-mc" id="btn-mc">Message Center</button>
+            <button class="btn btn-survey-1">Survey 1</button>
+            <button class="btn btn-survey-2">Survey 2</button>
+            <button class="btn btn-note">Note</button>
+        </div>
     </main>
 
-    <footer>
-        
-    </footer>
+    <footer></footer>
 
 </body>
 </html>
