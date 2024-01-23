@@ -101,11 +101,33 @@ document.addEventListener("DOMContentLoaded", function() {
   var loveDialogButton = document.querySelector(".btn-love");
 
   if (loveDialogButton) {
+    // Define the order of events
+    var loveDialogEvents = ['love_dialog', 'love', 'dialog', 'love_experience', '!love_experience', 'dialog_love'];
+
+    // Initialize the index
+    var currentIndex = 0;
+
     loveDialogButton.addEventListener("click", function() {
-      // Send an event named "love_dialog" when the button is clicked
-      ApptentiveSDK.engage('love_dialog');
+      // Get the event at the current index
+      var currentEvent = loveDialogEvents[currentIndex];
+
+      // Send the current event
+      ApptentiveSDK.engage(currentEvent);
+
+      // Move to the next event in the order
+      currentIndex = (currentIndex + 1) % loveDialogEvents.length;
     });
   }
+
+
+
+
+//   if (loveDialogButton) {
+//     loveDialogButton.addEventListener("click", function() {
+//       // Send an event named "love_dialog" when the button is clicked
+//       ApptentiveSDK.engage('love_dialog');
+//     });
+//   }
   
     // ... (add more event listeners if needed)
   });
