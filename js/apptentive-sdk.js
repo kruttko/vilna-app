@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
   // Assuming you have a button with the class "btn-love-dialog" for Love Dialog
-  var loveDialogButton = document.querySelector(".btn-love-dialog");
+  var loveDialogButton = document.querySelector(".btn-love");
 
   if (loveDialogButton) {
     loveDialogButton.addEventListener("click", function() {
