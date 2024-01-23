@@ -67,6 +67,26 @@ document.addEventListener("DOMContentLoaded", function() {
         ApptentiveSDK.engage('survey_1');
       });
     }
+
+  // Assuming you have a button with the class "btn-note-1" for Note 1
+  var note1Button = document.querySelector(".btn-note-1");
+
+  if (note1Button) {
+    note1Button.addEventListener("click", function() {
+      // Send an event named "note_1" when the button is clicked
+      ApptentiveSDK.engage('note_1');
+    });
+  }
+
+  // Assuming you have a button with the class "btn-love-dialog" for Love Dialog
+  var loveDialogButton = document.querySelector(".btn-love-dialog");
+
+  if (loveDialogButton) {
+    loveDialogButton.addEventListener("click", function() {
+      // Send an event named "love_dialog" when the button is clicked
+      ApptentiveSDK.engage('love_dialog');
+    });
+  }
   
     // ... (add more event listeners if needed)
   });
