@@ -32,8 +32,6 @@ document.addEventListener("DOMContentLoaded", function() {
       },
       person: {
         unique_token: uniqueIdentifier,
-        name: 'Full Name',
-        email: 'user@domain.tld',
         custom_data: {
           age: 30,
           premium: true
