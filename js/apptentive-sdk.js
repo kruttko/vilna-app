@@ -24,30 +24,76 @@ document.addEventListener("DOMContentLoaded", function() {
   
     // Generate a new random unique identifier for each page load
     var uniqueIdentifier = generateRandomIdentifier();
+
+      // Set debug mode to true
+  ApptentiveSDK.setOption('debug', true);
   
     // Create a conversation with the new identifier
     ApptentiveSDK.createConversation({
-      app_release: {
-        version: '1.0.0' // Replace with your website's version
-      },
-      person: {
-        unique_token: uniqueIdentifier,
-        custom_data: {
-          age: 30,
-          premium: true
+        app_release: {
+          version: '1.0.0' // Replace with your website's version
+        },
+        person: {
+          unique_token: uniqueIdentifier,
+          custom_data: {
+            age: 30,
+            total_purchases: getTotalPurchases(),
+            subscription_type: getSubscriptionType(),
+            zip_code: getZipCode()
+          }
+        },
+        device: {
+          custom_data: {
+            browser_name: getBrowserName(),
+            flash: hasFlashSupport(),
+            html: false
+          }
         }
-      },
-      device: {
-        custom_data: {
-          flash: true,
-        }
+      });
+    
+      // Function to generate a random identifier
+      function generateRandomIdentifier() {
+        return 'user-' + Math.random().toString(36).substr(2, 9);
       }
-    });
-  
-    // Function to generate a random identifier
-    function generateRandomIdentifier() {
-      return 'user-' + Math.random().toString(36).substr(2, 9);
-    }
+    
+      // Function to get the browser name
+      function getBrowserName() {
+        var userAgent = window.navigator.userAgent;
+        if (userAgent.indexOf("Chrome") != -1) return "Chrome";
+        if (userAgent.indexOf("Safari") != -1) return "Safari";
+        if (userAgent.indexOf("Firefox") != -1) return "Firefox";
+        if (userAgent.indexOf("Edge") != -1) return "Edge";
+        if (userAgent.indexOf("Opera") != -1 || userAgent.indexOf("OPR") != -1) return "Opera";
+        return "Unknown";
+      }
+    
+      // Function to check if Flash is supported
+      function hasFlashSupport() {
+        // Implement your logic to check if Flash is supported
+        // This is just a placeholder, you may need to use a more sophisticated approach
+        return true;
+      }
+    
+      // Function to get total purchases
+      function getTotalPurchases() {
+        // Implement your logic to get the total purchases
+        // This is just a placeholder, you may need to fetch this information from your application
+        return 10; // Replace with actual total purchases
+      }
+    
+      // Function to get subscription type
+      function getSubscriptionType() {
+        // Implement your logic to get the subscription type
+        // This is just a placeholder, you may need to fetch this information from your application
+        return "Premium"; // Replace with actual subscription type
+      }
+    
+      // Function to get zip code
+      function getZipCode() {
+        // Implement your logic to get the zip code
+        // This is just a placeholder, you may need to fetch this information from your application
+        return "12345"; // Replace with actual zip code
+      }
   
     // Assuming you have a button with the id "btn-mc" for Message Center
     var messageCenterButton = document.getElementById("btn-mc");
