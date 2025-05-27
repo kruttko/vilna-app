@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (survey1Button) {
       survey1Button.addEventListener("click", function() {
         // Send an event named "survey_1" when the button is clicked
-        ApptentiveSDK.engage('survey_1');
+        ApptentiveSDK.engage('survey_1_');
       });
     }
 
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function() {
       if (survey1Button) {
         survey1Button.addEventListener("click", function() {
           // Send an event named "survey_1" when the button is clicked
-          ApptentiveSDK.engage('survey_2');
+          ApptentiveSDK.engage('survey_2_');
         });
       }
   
