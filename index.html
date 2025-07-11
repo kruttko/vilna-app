@@ -1,38 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Website</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="./styling.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./styling.css" />
 
-    <!-- <script>(function initApptentiveSDK(){var ApptentiveSDK=window.ApptentiveSDK=window.ApptentiveSDK||[];if(!ApptentiveSDK.version){if(!ApptentiveSDK.loaded){ApptentiveSDK.loaded=true;ApptentiveSDK.methods=["buildDevice","createConversation","createMessage","engage","getSegments","identifyPerson","setOption","setPageName","showInteraction","showMessageCenter","updatePerson"];ApptentiveSDK.factory=function factory(t){return function f(){for(var _len=arguments.length,args=new Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key]}var e=Array.prototype.slice.call(args);e.unshift(t);ApptentiveSDK.push(e);return ApptentiveSDK}};for(var i=0;i<ApptentiveSDK.methods.length;i++){var method=ApptentiveSDK.methods[i];ApptentiveSDK[method]=ApptentiveSDK.factory(method)}ApptentiveSDK.LOADER_VERSION="1.0.0"}}})();</script>
-    <script async src="https://sdk.apptentive.com/v1/apps/64937a605d5ecb4963a6452f/websdk"></script> -->
+    <script>
+      (function initApptentiveSDK() {
+        var ApptentiveSDK = (window.ApptentiveSDK = window.ApptentiveSDK || []);
+        if (!ApptentiveSDK.version) {
+          if (!ApptentiveSDK.loaded) {
+            ApptentiveSDK.loaded = true;
+            ApptentiveSDK.methods = [
+              "buildDevice",
+              "createConversation",
+              "createMessage",
+              "engage",
+              "getSegments",
+              "identifyPerson",
+              "setOption",
+              "setPageName",
+              "showInteraction",
+              "showMessageCenter",
+              "updatePerson",
+            ];
+            ApptentiveSDK.factory = function factory(t) {
+              return function f() {
+                for (
+                  var _len = arguments.length, args = new Array(_len), _key = 0;
+                  _key < _len;
+                  _key++
+                ) {
+                  args[_key] = arguments[_key];
+                }
+                var e = Array.prototype.slice.call(args);
+                e.unshift(t);
+                ApptentiveSDK.push(e);
+                return ApptentiveSDK;
+              };
+            };
+            for (var i = 0; i < ApptentiveSDK.methods.length; i++) {
+              var method = ApptentiveSDK.methods[i];
+              ApptentiveSDK[method] = ApptentiveSDK.factory(method);
+            }
+            ApptentiveSDK.LOADER_VERSION = "1.0.0";
+          }
+        }
+      })();
+    </script>
+    <script
+      async
+      src="https://sdk.apptentive.com/v1/apps/64937a605d5ecb4963a6452f/websdk"
+    ></script>
 
-    <script>(function initApptentiveSDK(){var ApptentiveSDK=window.ApptentiveSDK=window.ApptentiveSDK||[];if(!ApptentiveSDK.version){if(!ApptentiveSDK.loaded){ApptentiveSDK.loaded=true;ApptentiveSDK.methods=["buildDevice","createConversation","createMessage","engage","getSegments","identifyPerson","setOption","setPageName","showInteraction","showMessageCenter","updatePerson"];ApptentiveSDK.factory=function factory(t){return function f(){for(var _len=arguments.length,args=new Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key]}var e=Array.prototype.slice.call(args);e.unshift(t);ApptentiveSDK.push(e);return ApptentiveSDK}};for(var i=0;i<ApptentiveSDK.methods.length;i++){var method=ApptentiveSDK.methods[i];ApptentiveSDK[method]=ApptentiveSDK.factory(method)}ApptentiveSDK.LOADER_VERSION="1.0.0"}}})();</script>
-<script async src="https://sdk.apptentive.com/v1/apps/5d3f7927b3921d793f00000e/websdk"></script>
+    <!-- <script>
+      (function initApptentiveSDK() {
+        var ApptentiveSDK = (window.ApptentiveSDK = window.ApptentiveSDK || []);
+        if (!ApptentiveSDK.version) {
+          if (!ApptentiveSDK.loaded) {
+            ApptentiveSDK.loaded = true;
+            ApptentiveSDK.methods = [
+              "buildDevice",
+              "createConversation",
+              "createMessage",
+              "engage",
+              "getSegments",
+              "identifyPerson",
+              "setOption",
+              "setPageName",
+              "showInteraction",
+              "showMessageCenter",
+              "updatePerson",
+            ];
+            ApptentiveSDK.factory = function factory(t) {
+              return function f() {
+                for (
+                  var _len = arguments.length, args = new Array(_len), _key = 0;
+                  _key < _len;
+                  _key++
+                ) {
+                  args[_key] = arguments[_key];
+                }
+                var e = Array.prototype.slice.call(args);
+                e.unshift(t);
+                ApptentiveSDK.push(e);
+                return ApptentiveSDK;
+              };
+            };
+            for (var i = 0; i < ApptentiveSDK.methods.length; i++) {
+              var method = ApptentiveSDK.methods[i];
+              ApptentiveSDK[method] = ApptentiveSDK.factory(method);
+            }
+            ApptentiveSDK.LOADER_VERSION = "1.0.0";
+          }
+        }
+      })();
+    </script> -->
+    <!-- <script
+      async
+      src="https://sdk.apptentive.com/v1/apps/5d3f7927b3921d793f00000e/websdk"
+    ></script> -->
 
-    <!-- <script src="./js/apptentive-sdk.js"></script> -->
-</head>
-<body>
+    <script src="./js/apptentive-sdk.js"></script>
+  </head>
+  <body>
     <header></header>
 
     <main>
-        <div class="main">
-            <!-- <button class="btn btn-mc" id="btn-mc">Message Center</button> -->
-            <button class="btn btn-survey-1">Survey 1</button>
-            <button class="btn btn-survey-2">Survey 2</button>
-            <button class="btn btn-note-1">Note 1</button>
-            <button class="btn btn-note-2">Note 2</button>
-            <!-- <button class="btn btn-love">Love Dialog</button> -->
-        </div>
+      <div class="main">
+        <!-- <button class="btn btn-mc" id="btn-mc">Message Center</button> -->
+        <button class="btn btn-survey-1">Survey 1</button>
+        <button class="btn btn-survey-2">Survey 2</button>
+        <button class="btn btn-note-1">Note 1</button>
+        <button class="btn btn-note-2">Note 2</button>
+        <!-- <button class="btn btn-love">Love Dialog</button> -->
+      </div>
     </main>
 
     <footer></footer>
@@ -42,10 +138,10 @@
         sg_beacon('init','NzM1MjA4LWUwZDg3ZWIyNWUxMWIyNjhkMzc1ZWY4MjAxMjg0N2IxNWFhYjIxZGM0ZWNkNDI1Yzli');
         </script> -->
 
-        <!-- local dev Website Intercept -->
-        <!-- <script type="text/javascript">
+    <!-- local dev Website Intercept -->
+    <!-- <script type="text/javascript">
             (function(d,e,j,h,f,c,b){d.SurveyGizmoBeacon=f;d[f]=d[f]||function(){(d[f].q=d[f].q||[]).push(arguments)};c=e.createElement(j),b=e.getElementsByTagName(j)[0];c.async=1;c.src=h;b.parentNode.insertBefore(c,b)})(window,document,'script','//app.akrutko.sdev.al2.testgizmo.us/runtimejs/intercept/intercept.js','sg_beacon');
             sg_beacon('init','MTMwMDAwNDE5LWJhOTk4NTM3YWVlMjFmM2YwYjQzMmQ1OGY1NWViMDdlOTAwYWIzNmM3NjAwZDVjMDkx');
             </script> -->
-</body>
+  </body>
 </html>
